@@ -44,15 +44,9 @@
       color: #00c853;
       font-weight: 800;
       font-size: 28px;
-      text-shadow: 1px 1px 2px #00000022;
     }
 
-    hr {
-      width: 100%;
-      border: none;
-      border-top: 1px solid #ddd;
-      margin: 20px 0;
-    }
+    hr { width: 100%; border-top: 1px solid #ddd; margin: 20px 0; }
 
     .verified h2 {
       font-size: 22px;
@@ -61,12 +55,9 @@
       gap: 6px;
     }
 
-    .green {
-      color: #00b86b;
-      font-weight: 700;
-    }
+    .green { color: #00b86b; font-weight: 700; }
 
-    .whatsapp-logo { width: 60px; }
+    .whatsapp-logo { width: 60px; margin: 10px 0; }
 
     .message {
       background: #d6fff0;
@@ -74,7 +65,6 @@
       border-radius: 12px;
       margin: 20px 0;
       text-align: center;
-      font-weight: 500;
     }
 
     .mensaje-bono {
@@ -97,6 +87,7 @@
       font-size: 18px;
       box-shadow: 0 0 15px #25d366;
       animation: pulse 2s infinite;
+      cursor: pointer;
     }
 
     @keyframes pulse {
@@ -131,7 +122,7 @@
 
 <header>
   <div class="logo-text">🎰 WhatsApp Bonos</div>
-  <img class="whatsapp-logo" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png">
+  <img class="whatsapp-logo" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" />
 </header>
 
 <hr>
@@ -151,7 +142,7 @@
 </div>
 
 <!-- BOTÓN WHATSAPP -->
-<a href="#" class="whatsapp-button" onclick="irAWhatsApp()">
+<a class="whatsapp-button" onclick="irAWhatsApp()">
   📲 ¡QUIERO MI BONO DEL 200%!
 </a>
 
@@ -165,12 +156,16 @@
 
 <script>
   function irAWhatsApp() {
-    fbq('trackCustom', 'ClickWhatsApp');
+    try {
+      fbq('trackCustom', 'ClickWhatsApp');
+    } catch (e) {}
+
     setTimeout(function () {
-      window.location.href = "https://wa.link/ganandoconpiliqueen";
+      window.location.assign("https://wa.link/ganandoconpiliqueen");
     }, 300);
   }
 </script>
 
 </body>
 </html>
+
