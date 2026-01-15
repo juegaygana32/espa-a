@@ -15,7 +15,6 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-M6N55R94');
   </script>
-  <!-- End Google Tag Manager -->
 
   <!-- Meta Pixel -->
   <script>
@@ -43,9 +42,27 @@
       padding: 20px;
     }
 
+    .top-bonus {
+      background: linear-gradient(90deg, #ffd700, #ffb300);
+      color: #000;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-weight: 800;
+      font-size: 13px;
+      text-align: center;
+      margin-bottom: 18px;
+      box-shadow: 0 0 25px #ffd700;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 12px #ffd700; }
+      to { box-shadow: 0 0 30px #ffeb3b; }
+    }
+
     .hero img {
       width: 220px;
-      margin: 20px 0 10px;
+      margin: 10px 0;
       animation: float 3s ease-in-out infinite;
     }
 
@@ -64,6 +81,7 @@
       width: 100%;
       text-align: center;
       backdrop-filter: blur(10px);
+      margin-top: 10px;
     }
 
     .cta-box p {
@@ -103,6 +121,31 @@
       margin-top: 8px;
     }
 
+    .info-box {
+      margin-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .info-item {
+      flex: 1;
+s
+      background: rgba(0,0,0,0.25);
+      border-radius: 12px;
+      padding: 10px 6px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      box-shadow: 0 0 12px rgba(255,215,0,0.25);
+    }
+
+    .info-item span {
+      display: block;
+      margin-top: 4px;
+      color: #ffd700;
+    }
+
     .slots {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -126,11 +169,14 @@
 
 <body>
 
-<!-- Google Tag Manager (noscript) -->
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6N55R94"
 height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
+
+<div class="top-bonus">
+  200% EN LA PRIMERA CARGA Y 50% EN TODAS SUS CARGAS
+</div>
 
 <div class="hero">
   <img src="midas.png" alt="Casino Bonus">
@@ -145,6 +191,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
   <div class="cta-warning">
     ATENCIÓN Y RETIROS SIN LÍMITES LAS 24 HS
+  </div>
+
+  <div class="info-box">
+    <div class="info-item">
+      MÍNIMO DE CARGA
+      <span>$1.000</span>
+    </div>
+    <div class="info-item">
+      MÍNIMO DE RETIRO
+      <span>$3.000</span>
+    </div>
+    <div class="info-item">
+      RETIROS
+      <span>24 HS</span>
+    </div>
   </div>
 </div>
 
@@ -169,5 +230,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
 </body>
 </html>
+
 
 
